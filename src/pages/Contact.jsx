@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="flex justify-around">
+    <div className="lg:flex justify-around">
       <motion.div
-       initial={{ x: "-100%"}}
-       whileInView={{ x: "0%"}}
-       transition={{ duration: 0.5 }}
-      class="w-[500px] min-h-screen flex flex-col justify-center sm:py-4">
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      class=" min-h-screen flex flex-col justify-center sm:py-4">
         <div class="py-3 sm:max-w-xl sm:mx-auto">
           <div class="text-white px-4 py-5 bg-indigo-400 shadow-lg sm:rounded-3xl sm:p-10">
             <div class="text-center pb-3">
@@ -68,10 +68,10 @@ const Contact = () => {
         </div>
       </motion.div>
       <motion.div
-       initial={{ x: "100%"}}
-       whileInView={{ x: "0%"}}
-       transition={{ duration: 0.5 }}
-      class="w-[500px] min-h-screen flex flex-col justify-center sm:py-4">
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      class=" min-h-screen flex flex-col justify-center sm:py-4">
         <div class="py-3 sm:max-w-xl sm:mx-auto">
           <div class="text-white px-4 py-5 bg-indigo-400 shadow-lg sm:rounded-3xl sm:p-10">
             <div>
@@ -110,7 +110,7 @@ const Contact = () => {
                       class="text-white text-sm ml-3"
                     >
                     
-                      <strong>sonusharma30.09.2004@gmail.com</strong>
+                      <strong className="textWrap w-[200px] block">sonusharma30.09.2004@gmail.com</strong>
                     </a>
                   </li>
                 </ul>

@@ -78,3 +78,7 @@ body{
 .shadowImg{
     box-shadow: "0 1px 30px rgba(255, 255, 255, 0.2)"
 }
+.textWrap{
+    
+    word-wrap: break-word;
+}

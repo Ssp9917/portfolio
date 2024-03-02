@@ -29,17 +29,17 @@ const Service = () => {
         className="text-center text-white text-4xl font-semibold mb-14 mt-5 "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         MY <span className="text-[#08d665]">SERVICE</span>
       </motion.div>
-      <div className="flex  justify-around">
+      <div className="flex flex-wrap gap-5  justify-around">
         {service.map((d, i) => {
           return (
             <motion.div
-              initial={{ x: "-100%"}}
-              whileInView={{ x: "0%"}}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
               className="border border-white  text-white w-[300px] h-[230px] "
               key={i}
             >
