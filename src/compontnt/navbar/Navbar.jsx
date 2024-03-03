@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import resume from '../document/sonu.pdf'
 
 const Navbar = () => {
   const [togle, setTogle] = useState(false);
@@ -75,9 +76,11 @@ const Navbar = () => {
               Contact
             </motion.li>
           </Link>
+          <a href={resume} target="_blank" type="file" download={true}>
           <button className=" pl-4 pe-4 pt-1 pb-1 button relative overflow-hidden w-[150px] h-[50px]">
             Resume
           </button>
+          </a>
         </ul>
         {!togle ? (
           <IoMenu
@@ -104,7 +107,7 @@ const Navbar = () => {
             togle == true ? "left-0" : "-left-full"
           }`}
         >
-          <Link>
+          <Link to='' onClick={()=>{setTogle(false)}}>
             <motion.li
               initial={{ y: "-100%" }}
               animate={{ y: "0%" }}
@@ -114,7 +117,7 @@ const Navbar = () => {
               Home
             </motion.li>
           </Link>
-          <Link>
+          <Link to='about' onClick={()=>{setTogle(false)}}>
             <motion.li
               className="hover:text-[#08d665] list"
               initial={{ y: "-100%" }}
@@ -124,7 +127,17 @@ const Navbar = () => {
               About
             </motion.li>
           </Link>
-          <Link>
+          <Link to='project' onClick={()=>{setTogle(false)}}>
+            <motion.li
+              className="hover:text-[#08d665] list"
+              initial={{ y: "-100%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 1 }}
+            >
+              Service
+            </motion.li>
+          </Link>
+          <Link to='project' onClick={()=>{setTogle(false)}}>
             <motion.li
               className="hover:text-[#08d665] list"
               initial={{ y: "-100%" }}
@@ -134,7 +147,7 @@ const Navbar = () => {
               Projects
             </motion.li>
           </Link>
-          <Link>
+          <Link to='contact' onClick={()=>{setTogle(false)}}>
             <motion.li
               className="hover:text-[#08d665] list"
               initial={{ y: "-100%" }}
@@ -144,9 +157,11 @@ const Navbar = () => {
               Contact
             </motion.li>
           </Link>
+          <a href={resume} target="_blank" type="file" download={true}>
           <button className=" pl-4 pe-4 pt-1 pb-1 rounded-full  border-white duration-500 hover:border-[#08d655] border-2 w-[150px] h-[50px]">
             Resume
           </button>
+          </a>
         </ul>
         <div></div>
       </div>
