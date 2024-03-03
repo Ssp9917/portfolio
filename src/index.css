@@ -82,3 +82,8 @@ body{
     
     word-wrap: break-word;
 }
+.morfisim{
+    box-shadow: 0px 0px 80px #bebebe59;
+    backdrop-filter: blur(9px);
+    background-color: #534f4f59;
+}
